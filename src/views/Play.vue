@@ -12,11 +12,10 @@
 </template>
 
 <script>
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
+//import firebase from "firebase/compat/app";
 
 export default {
-  name: "LoginView",
+  name: "PlayView",
   data() { },
   methods: { },
 };

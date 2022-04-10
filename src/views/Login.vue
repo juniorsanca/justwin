@@ -10,21 +10,22 @@
 
 <script>
 import firebase from 'firebase/compat/app'; 
-//import 'firebase/compat/auth';
-
+import 'firebase/compat/auth';
 
 export default {
     name: 'LoginView',
     data() {
         return {
             email: '',
-            password : ''
+            password : ''        
         }
     },
     methods: {
         login: function() {
-            firebase.auth().signInWithEmailAndPassword(this.email, this.password) .then(
-            (user) => { 
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+            .then((firebaseUser) => { 
+                console.log("user value is", firebaseUser)
+
                 this.$router.replace('home')
                 }, 
              (err) => { 
