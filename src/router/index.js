@@ -8,6 +8,8 @@ import LoginView from '../views/Login.vue'
 import RegisterView from '../views/Register.vue'
 import Play from '../views/Play.vue'
 import Game from '../views/Game.vue'
+import VerifyEmail from '../views/VerifyEmail.vue'
+
 //import RegisterView from '../views/Register.vue'
 
 
@@ -52,11 +54,20 @@ const router = new Router ({
     component : Game,
     },
     {
+    path: '/verify-email',
+    name: 'VerifyEmail',
+    component : VerifyEmail,
+     meta: {
+        requiresAuth: true
+      }
+    },
+    {
     path: '/home',
     name: 'home',
     component: HomeView,
      meta: {
-      requiresAuth: true
+       requiresAuth: true,
+       requiresEmailVerification: true
     }
   }
 ]
@@ -67,16 +78,17 @@ router.beforeEach((to, from, next) => {
   const currentUser = firebase.auth().currentUser;
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
-  if (requiresAuth && !currentUser) next ('login');
-  else if (!requiresAuth && currentUser)next('home');
+  if (requiresAuth && !currentUser) {
+      next ('login');
+  } else if (!requiresAuth && currentUser) {
+
+    if (currentUser.emailVerified){
+      next('home')
+      } else {
+          next('/verify-email')
+      }
+    }
   else next();
 });
 
-/*
-router.beforeEach((to, from) => {
-  // ...
-  // explicitly return false to cancel the navigation
-  return false
-})
-*/
 export default router;

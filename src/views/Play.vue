@@ -15,8 +15,6 @@
 //import firebase from "firebase/compat/app";
 
 export default {
-  name: "PlayView",
-  data() { },
-  methods: { },
+  name: "PlayView"
 };
 </script>
