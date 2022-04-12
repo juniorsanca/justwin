@@ -9,6 +9,8 @@ import RegisterView from '../views/Register.vue'
 import Play from '../views/Play.vue'
 import Game from '../views/Game.vue'
 import VerifyEmail from '../views/VerifyEmail.vue'
+import RankingView from '../views/Ranking.vue'
+
 
 //import RegisterView from '../views/Register.vue'
 
@@ -29,6 +31,14 @@ const router = new Router ({
     path: '/about',
     name: 'about',
     component: AboutView
+  },
+    {
+    path: '/ranking',
+    name: 'ranking',
+    component: RankingView,
+       meta: {
+        requiresAuth: true
+      }
   },
   {
     path: '/login',
