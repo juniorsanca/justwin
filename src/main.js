@@ -5,6 +5,9 @@ import 'firebase/compat/auth';
 
 import App from './App.vue';
 import router from './router';
+import './index.css'
+
+
 
 Vue.config.productionTip = false;
 
@@ -19,15 +22,6 @@ firebase.initializeApp({
   appId: "1:802684901559:web:d17a4a2fdc148d61bbd532",
   measurementId: "G-ZT1RS3N639"
 });
-
-/*
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig)
-}
-
-*/
-//export const auth = firebase.auth() 
-//export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 
 firebase.auth().onAuthStateChanged(() => {
   if(!app) {
