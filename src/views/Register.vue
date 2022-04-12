@@ -58,7 +58,8 @@ export default {
         twitterConnect(){
            const provider = new firebase.auth.TwitterAuthProvider();
         firebase.auth().signInWithPopup(provider).then(() => {
-          this.$router.replace('home'); }).catch((err) => {
+          this.$router.replace('home');
+           }).catch((err) => {
              alert('Oops. ' + err.message)
         }) },
 
