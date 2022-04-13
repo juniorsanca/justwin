@@ -2,34 +2,93 @@
 <div>
 <img alt="Vue logo" src="../public/assets/img/justwin.gif"> 
 
-<div class="relative z-0 mb-6 w-full group">
-        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        <label for="floating_last_name" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+    <div class="relative z-0 mb-6 w-full group">
+        <input  type="text" 
+                name="floating_last_name" 
+                id="floating_last_name" 
+                class="block py-2.5 px-5 w-full
+                       text-sm text-pink-500 bg-transparent 
+                       border-0 border-b-2 border-gray-300 
+                       appearance-none 
+                       dark:border-blue-600 
+                       dark:focus:border-blue-500 
+                       focus:outline-none focus:ring-0 
+                       focus:border-pink-600 peer" 
+                placeholder=" Username " required />
     </div>
 
 <div class="w-full bg-white shadow-lg lg:w-1/3">
     <ul class="divide-y-2 divide-gray-400">
+        
         <li class="flex justify-between p-3 bg-black text-white">
-            View List Item
-           <div> 2000 </div>
+            <div>N°</div>
+                 Username
+            <div> Score </div>
         </li>
-            <li class="flex justify-between p-3 bg-black text-white">
-            View List Item
-           <div> 2000 </div>
-        </li>
-            <li class="flex justify-between p-3 bg-black text-white">
-            View List Item
-           <div> 2000 </div>
-        </li>
-            <li class="flex justify-between p-3 bg-black text-white">
-            View List Item
-           <div> 2000 </div>
+            <div class="">
+                <hr class="border-2 border-blue-600">
+            </div>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#1</div>
+                View List Item
+            <div> 2000 </div>
         </li>
         <li class="flex justify-between p-3 bg-black text-white">
-            View List Item
-           <div> 2000 </div>
+            <div>#2</div>
+                View List Item
+            <div> 200 </div>
         </li>
-
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#3</div>
+                View List Item
+            <div> 20 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#4</div>
+                View List Item
+            <div> 2 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#5</div>
+                View List Item
+            <div> 2000 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#6</div>
+                View List Item
+            <div> 200 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#7</div>
+                View List Item
+            <div> 20 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#8</div>
+                View List Item
+            <div> 2 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#9</div>
+                View List Item
+            <div> 2000 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#10</div>
+                View List Item
+            <div> 200 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#11</div>
+                View List Item
+            <div> 20 </div>
+        </li>
+        <li class="flex justify-between p-3 bg-black text-white">
+            <div>#12</div>
+                View List Item
+            <div> 2 </div>
+        </li>
+  
     </ul>
 </div>
 </div>

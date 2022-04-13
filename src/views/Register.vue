@@ -7,14 +7,12 @@
 
     <div>
       <input class="
-      text-white
-      bg-black bg-opacity-100
-      rounded-full
-      border-2 border-pink-400
-      w-64 p-2 mb-6 
-      text-white-700 
-      border-b-2 border-blue-500 
-      outline-none"
+        bg-black bg-opacity-100
+        rounded-full
+        border-2 border-pink-400
+        w-64 p-2 mb-6 
+        text-blue-300 
+        outline-none"
       placeholder="Name" 
       v-model="name"
       type="name" 
@@ -23,14 +21,12 @@
 
     <div>
       <input class="
-      text-white
-      bg-black bg-opacity-100
-      rounded-full
-      border-2 border-pink-400
-      w-64 p-2 mb-6 
-      text-white-700 
-      border-b-2 border-blue-500 
-      outline-none"
+        bg-black bg-opacity-100
+        rounded-full
+        border-2 border-pink-400
+        w-64 p-2 mb-6 
+        text-blue-300 
+        outline-none"
       placeholder="Email" 
       v-model="email"
       type="email" 
@@ -39,11 +35,11 @@
 
     <div>
       <input class="
-      bg-black bg-opacity-100 rounded-full
-      border-2 border-pink-400
-      w-64 p-2 mb-6 text-blue-600 
-      border-b-2 border-indigo-500 
-      outline-none" 
+        bg-black bg-opacity-100
+        rounded-full
+        border-2 border-pink-400
+        w-64 p-2 mb-6 text-blue-600 
+        outline-none" 
       placeholder="Password" 
       type="password" 
       v-model="password"

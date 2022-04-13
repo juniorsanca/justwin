@@ -1,33 +1,27 @@
 <template>
     <div>
-    <!--
-    <div 
-    class="bg-cover bg-center ..." 
-    style="background-image: url('../public/assets/img/gmail.png')">
-    -->
-    <div>
-        <div class="px-1 py-2.5 text-center mr-0 mb-2">
-            <img alt="Vue logo" src="../public/assets/img/justwin.gif">
+        <div>
+            <div class="px-1 py-2.5 text-center mr-0 mb-2">
+                <img alt="Vue logo" src="../public/assets/img/justwin.gif">
+            </div>
+        <div>
+        <input class="
+            bg-black bg-opacity-100
+            rounded-full
+            border-2 border-pink-600
+            w-64 p-2 mb-6 
+            text-blue-300 
+            outline-none"
+            placeholder="Email" 
+            v-model="email"
+            type="email" 
+            name="email">
         </div>
-    <div>
-      <input class="
-      bg-black bg-opacity-100
-      rounded-full
-      border-2 border-pink-400
-      w-64 p-2 mb-6 
-      text-white-700 
-      border-b-2 border-blue-500 
-      outline-none"
-      placeholder="Email" 
-      v-model="email"
-      type="email" 
-      name="email">
-    </div>
 
     <div>
       <input class="
       bg-black bg-opacity-100 rounded-full
-      border-2 border-pink-400
+      border-2 border-pink-600
       w-64 p-2 mb-6 text-blue-600 
       border-b-2 border-indigo-500 
       outline-none" 
@@ -36,13 +30,7 @@
       v-model="password"
       name="password">
     </div><br>
-<!--
-    <div>
-      <small>
-        <router-link to="#" class="text-white float-right w-64">Forgot password ?</router-link>
-      </small>
-  </div><br>
--->
+
     <button
       type="button"
       @click="Login"

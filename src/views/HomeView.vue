@@ -29,7 +29,10 @@
              rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 
              dark:border-blue-500 dark:text-blue-500 dark:hover:text-white
               dark:hover:bg-blue-600 dark:focus:ring-blue-800"
-          >Rankings</button>
+          >
+          <router-link to="/ranking" class="text-white">Rankings</router-link>
+
+          </button>
 
           <button
             type="button"
