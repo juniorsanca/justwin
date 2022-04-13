@@ -8,13 +8,17 @@
         </div>
         <div>
             <img alt="Vue logo" src="../public/assets/img/discord.png">
-        </div>
-<br>
+        </div><br>
+
         <div class="grid grid-cols-2 flex justify-center">
           <button
               type="button"
-              class="text-white hover:text-white 
-              border border-cyan-700 hover:bg-cyan-800 
+              class="
+              font-sans
+              shadow-lg shadow-pink-500/50
+
+              text-white hover:text-white 
+              border-2 border-pink-700 hover:bg-cyan-800 
               focus:ring-4 focus:outline-none focus:ring-cyan-300 
               font-medium rounded-lg text-sm px-5 py-2.5 text-center
                mr-2 mb-2 dark:border-cyan-500 dark:text-cyan-500 
@@ -23,8 +27,12 @@
 
           <button
             type="button"
-            class="text-white hover:text-white border
-             border-cyan-700 hover:bg-blue-800 focus:ring-4
+            class="
+             font-sans
+             shadow-lg shadow-pink-500/50
+
+             text-white hover:text-white border-2
+             border-pink-700 hover:bg-blue-800 focus:ring-4
              focus:outline-none focus:ring-blue-300 font-medium 
              rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 
              dark:border-blue-500 dark:text-blue-500 dark:hover:text-white
@@ -36,7 +44,11 @@
 
           <button
             type="button"
-            class="text-white hover:text-white border border-cyan-700 
+            class="
+            font-sans
+            shadow-lg shadow-pink-500/50
+
+            text-white hover:text-white border-2 border-pink-700 
             hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
             font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 
             dark:border-blue-500 dark:text-blue-500 dark:hover:text-white 
@@ -46,11 +58,15 @@
           <button
             type="button"
             @click="logout"
-            class="text-white hover:text-white border border-cyan-700 
-            hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
+            class="
+             font-sans
+             shadow-lg shadow-pink-500/50
+
+             text-white hover:text-white border-2 border-pink-700 
+             hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
              font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 
              dark:border-blue-500 dark:text-blue-500 dark:hover:text-white
-              dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+             dark:hover:bg-blue-600 dark:focus:ring-blue-800"
           >Exit</button>
         </div>
     </div>

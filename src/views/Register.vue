@@ -7,9 +7,10 @@
 
     <div>
       <input class="
+        font-sans
         bg-black bg-opacity-100
         rounded-full
-        border-2 border-pink-400
+        border-2 border-blue-400
         w-64 p-2 mb-6 
         text-blue-300 
         outline-none"
@@ -21,9 +22,10 @@
 
     <div>
       <input class="
+        font-sans
         bg-black bg-opacity-100
         rounded-full
-        border-2 border-pink-400
+        border-2 border-blue-400
         w-64 p-2 mb-6 
         text-blue-300 
         outline-none"
@@ -35,9 +37,10 @@
 
     <div>
       <input class="
+        font-sans
         bg-black bg-opacity-100
         rounded-full
-        border-2 border-pink-400
+        border-2 border-blue-400
         w-64 p-2 mb-6 text-blue-600 
         outline-none" 
       placeholder="Password" 
@@ -50,8 +53,10 @@
     <button
       type="button"
       @click="Register"
-      class="text-white bg-dark-200 w-64
-              border-2 border-blue-600
+      class=" font-sans text-base
+              shadow-lg shadow-pink-500/50
+              text-white bg-dark-200 w-64
+              border-4 border-pink-600
               hover:bg-gray-900 
               focus:outline-none 
               rounded-full
@@ -80,7 +85,7 @@
   <div class="flex space-x-3 justify-center">
       <div>
           <button @click="googleConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/gmail.png">
+            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/google.png">
           </button><br>
       </div>
       <div>

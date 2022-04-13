@@ -6,32 +6,39 @@
         <input  type="text" 
                 name="floating_last_name" 
                 id="floating_last_name" 
-                class="block py-2.5 px-5 w-full
+                class="
+                       font-sans text-base text-white
+                       block py-2.5 px-5 w-full
                        text-sm text-pink-500 bg-transparent 
                        border-0 border-b-2 border-gray-300 
                        appearance-none 
+                       
                        dark:border-blue-600 
                        dark:focus:border-blue-500 
                        focus:outline-none focus:ring-0 
                        focus:border-pink-600 peer" 
-                placeholder=" Username " required />
+                placeholder=" Search username " required />
     </div>
 
 <div class="w-full bg-white shadow-lg lg:w-1/3">
     <ul class="divide-y-2 divide-gray-400">
         
         <li class="flex justify-between p-3 bg-black text-white">
-            <div>N°</div>
-                 Username
-            <div> Score </div>
+            <div class="font-sans">N°</div>
+                <h5 class="font-sans">
+                    Nickname
+                </h5>
+            <div class="font-sans"> Score </div>
         </li>
-            <div class="">
-                <hr class="border-2 border-blue-600">
-            </div>
+            <li class="">
+                <hr class="border-2 border-pink-700">
+            </li>
         <li class="flex justify-between p-3 bg-black text-white">
-            <div>#1</div>
-                View List Item
-            <div> 2000 </div>
+            <div class="font-sans">#1</div>
+                <h5 class="font-sans">
+                    View List Item
+                </h5>
+            <div class="font-sans"> 2000 </div>
         </li>
         <li class="flex justify-between p-3 bg-black text-white">
             <div>#2</div>

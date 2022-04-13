@@ -6,11 +6,11 @@
             </div>
         <div>
         <input class="
-            bg-black bg-opacity-100
-            rounded-full
-            border-2 border-pink-600
-            w-64 p-2 mb-6 
-            text-blue-300 
+            font-strasua text-center text-white
+            shadow-lg shadow-cyan-500/50
+            bg-black rounded-full
+            border border-cyan-300
+            w-64 p-2 mb-6 placeholder-white
             outline-none"
             placeholder="Email" 
             v-model="email"
@@ -20,12 +20,15 @@
 
     <div>
       <input class="
+      font-sans text-center
+      shadow-lg shadow-cyan-500/50
+      placeholder-white
+
       bg-black bg-opacity-100 rounded-full
-      border-2 border-pink-600
+      border border-cyan-300
       w-64 p-2 mb-6 text-blue-600 
-      border-b-2 border-indigo-500 
       outline-none" 
-      placeholder="Password" 
+      placeholder="PASSWORDY" 
       type="password" 
       v-model="password"
       name="password">
@@ -34,18 +37,22 @@
     <button
       type="button"
       @click="Login"
-      class="text-white bg-dark-200 w-64
-              border-2 border-blue-600
+      class=" 
+              font-sans text-white text-base
+              shadow-lg shadow-pink-500/50 bg-dark-200 w-64
+              border border-pink-500
               hover:bg-gray-900 
               focus:outline-none 
+              placeholder-white
+
               rounded-full
               focus:ring-4 
               focus:ring-gray-300 
               font-medium rounded-lg 
               text-sm px-5 py-2.5 mr-2 mb-2 
               dark:bg-gray-800 dark:hover:bg-gray-700 
-              dark:focus:ring-gray-700 dark:border-gray-700"
-    >Login</button><br>
+              dark:focus:ring-gray-700 "
+    >LOGIN</button><br>
 
     <br><br>
     <div class=" grid grid-cols-3 gap-3 content-evenly ...">
@@ -64,17 +71,17 @@
   <div class="flex space-x-3 justify-center">
       <div>
           <button @click="googleConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/gmail.png">
+            <img class="h-6 w-6" alt="Vue logo" src="../public/assets/img/google.png">
           </button><br>
       </div>
       <div>
           <button @click="facebookConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/facebook.png">
+            <img class="h-6 w-6" alt="Vue logo" src="../public/assets/img/facebook.png">
           </button><br>
       </div>
       <div>
           <button @click="twitterConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/twitter.png">
+            <img class="h-8 w-8" alt="Vue logo" src="../public/assets/img/twitter.png">
           </button><br>
       </div>
   </div>
@@ -82,8 +89,8 @@
 <br>
   <div>
       <small class="text-white">
-      Don't have an account ? 
-      <router-link to="/register" class="text-blue-500">Sign up</router-link>
+        Don't have an account ? 
+      <router-link to="/register" class="text-pink-500">Sign up</router-link>
       </small>
   </div><br>
  
