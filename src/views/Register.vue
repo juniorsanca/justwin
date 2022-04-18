@@ -7,12 +7,13 @@
 
     <div>
       <input class="
-        font-sans
-        bg-black bg-opacity-100
-        rounded-full
-        border-2 border-blue-400
-        w-64 p-2 mb-6 
-        text-blue-300 
+        font-sans text-center text-white
+        shadow-lg shadow-cyan-500/50
+        bg-black rounded-full
+        border border-cyan-300
+        w-64 p-2 mb-6 placeholder-white
+
+
         outline-none"
       placeholder="Name" 
       v-model="name"
@@ -22,26 +23,25 @@
 
     <div>
       <input class="
-        font-sans
-        bg-black bg-opacity-100
-        rounded-full
-        border-2 border-blue-400
-        w-64 p-2 mb-6 
-        text-blue-300 
+        font-sans text-center text-white 
+        shadow-lg shadow-cyan-500/50 bg-black
+        rounded-full border border-cyan-300 
+        w-64 p-2 mb-6 placeholder-white
+
         outline-none"
-      placeholder="Email" 
-      v-model="email"
-      type="email" 
-      name="username">
+        placeholder="Email" 
+        v-model="email"
+        type="email" 
+        name="username">
     </div>
 
     <div>
       <input class="
-        font-sans
-        bg-black bg-opacity-100
-        rounded-full
-        border-2 border-blue-400
-        w-64 p-2 mb-6 text-blue-600 
+        font-sans text-center text-white 
+        shadow-lg shadow-cyan-500/50 bg-black
+        rounded-full border border-cyan-300 
+        w-64 p-2 mb-6 placeholder-white
+ 
         outline-none" 
       placeholder="Password" 
       type="password" 
@@ -53,19 +53,17 @@
     <button
       type="button"
       @click="Register"
-      class=" font-sans text-base
-              shadow-lg shadow-pink-500/50
-              text-white bg-dark-200 w-64
-              border-4 border-pink-600
-              hover:bg-gray-900 
-              focus:outline-none 
-              rounded-full
-              focus:ring-4 
-              focus:ring-gray-300 
-              font-medium rounded-lg 
-              text-sm px-5 py-2.5 mr-2 mb-2 
-              dark:bg-gray-800 dark:hover:bg-gray-700 
-              dark:focus:ring-gray-700 dark:border-gray-700"
+      class=" 
+        font-sans text-white text-base 
+        shadow-lg shadow-pink-500/50
+        bg-dark-200 w-64 border border-pink-500
+        hover:bg-gray-900 focus:outline-none
+        placeholder-white rounded-full focus:ring-4
+        focus:ring-gray-300 font-medium 
+        rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 
+        dark:hover:bg-gray-700
+        dark:focus:ring-gray-700
+        "
     >Sing up</button><br>
 
   <br> 
@@ -81,21 +79,20 @@
     </div>
   </div>
   <br>
-
-  <div class="flex space-x-3 justify-center">
+    <div class="flex space-x-3 justify-center">
       <div>
           <button @click="googleConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/google.png">
+            <img class="h-6 w-6" alt="Vue logo" src="../public/assets/img/google.png">
           </button><br>
       </div>
       <div>
           <button @click="facebookConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/facebook.png">
+            <img class="h-6 w-6" alt="Vue logo" src="../public/assets/img/facebook.png">
           </button><br>
       </div>
       <div>
           <button @click="twitterConnect"> 
-            <img class="h-11 w-11" alt="Vue logo" src="../public/assets/img/twitter.png">
+            <img class="h-8 w-8" alt="Vue logo" src="../public/assets/img/twitter.png">
           </button><br>
       </div>
   </div>
