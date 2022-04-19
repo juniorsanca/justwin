@@ -6,13 +6,14 @@
             </div>
         <div>
         <input class="
-            font-strasua text-center text-white
+            font-sans text-center font-bold text-white
+
             shadow-lg shadow-cyan-500/50
             bg-black rounded-full
             border border-cyan-300
             w-64 p-2 mb-6 placeholder-white
             outline-none"
-            placeholder="Email" 
+            placeholder="EMAIL" 
             v-model="email"
             type="email" 
             name="email">
@@ -20,25 +21,31 @@
 
     <div>
       <input class="
-      font-sans text-center
+      font-sans text-center font-bold
+
       shadow-lg shadow-cyan-500/50
       placeholder-white
 
       bg-black bg-opacity-100 rounded-full
       border border-cyan-300
-      w-64 p-2 mb-6 text-blue-600 
+      w-64 p-2 mb-6 text-white 
       outline-none" 
-      placeholder="PASSWORDY" 
+      placeholder="PASSWORD" 
       type="password" 
       v-model="password"
       name="password">
-    </div><br>
+    </div>
 
+  <small class="text-white">
+      <router-link to="/forgot-password" class="text-white"> Forgot password </router-link>
+      </small>
+<br><br>
     <button
       type="button"
       @click="Login"
       class=" 
-              font-sans text-white text-base
+              font-sans text-white text-base font-bold
+
               shadow-lg shadow-pink-500/50 bg-dark-200 w-64
               border border-pink-500
               hover:bg-gray-900 
@@ -46,12 +53,13 @@
               placeholder-white
 
               rounded-full
-              focus:ring-4 
-              focus:ring-gray-300 
-              font-medium rounded-lg 
               text-sm px-5 py-2.5 mr-2 mb-2 
               dark:bg-gray-800 dark:hover:bg-gray-700 
-              dark:focus:ring-gray-700 "
+              dark:focus:ring-gray-700 
+              
+              rounded-full bg-black bg-opacity-100 rounded-full border border-pink-500 w-64
+            p-2 mb-6 text-white outline-none
+"
     >LOGIN</button><br>
 
     <br><br>
@@ -88,6 +96,7 @@
 
 <br>
   <div>
+
       <small class="text-white">
         Don't have an account ? 
       <router-link to="/register" class="text-pink-500">Sign up</router-link>
@@ -123,27 +132,31 @@ export default {
                 } 
            );
         },
-        googleConnect(){ const provider = new firebase.auth.GoogleAuthProvider();
+        googleConnect(){ 
+            const provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(() => {
             this.$router.replace('home'); 
             }).catch((err) => { 
                 alert('Oops. ' + err.message)
             }) 
         },
-        facebookConnect(){ const provider = new firebase.auth.FacebookAuthProvider();
+        facebookConnect(){ 
+            const provider = new firebase.auth.FacebookAuthProvider();
             firebase.auth().signInWithPopup(provider).then(() => {
             this.$router.replace('home'); 
             }).catch((err) => { 
                 alert('Oops. ' + err.message)
             }) 
         },
-        twitterConnect(){ const provider = new firebase.auth.TwitterAuthProvider();
+        twitterConnect(){ 
+            const provider = new firebase.auth.TwitterAuthProvider();
             firebase.auth().signInWithPopup(provider).then(() => {
             this.$router.replace('home'); 
             }).catch((err) => { 
                 alert('Oops. ' + err.message)
             }) 
         },
+
 
      }
 }

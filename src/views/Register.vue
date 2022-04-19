@@ -7,14 +7,15 @@
 
     <div>
       <input class="
-        font-sans text-center text-white
+        font-sans text-center text-white font-bold
+
         shadow-lg shadow-cyan-500/50
         bg-black rounded-full
         border border-cyan-300
         w-64 p-2 mb-6 placeholder-white
 
         outline-none"
-        placeholder="Name" 
+        placeholder="NAME" 
         v-model="user.name"
         type="name" 
         name="name">
@@ -22,13 +23,14 @@
 
     <div>
       <input class="
-        font-sans text-center text-white 
+        font-sans text-center text-white font-bold
+
         shadow-lg shadow-cyan-500/50 bg-black
         rounded-full border border-cyan-300 
         w-64 p-2 mb-6 placeholder-white
 
         outline-none"
-        placeholder="Email" 
+        placeholder="EMAIL" 
         v-model="user.email"
         type="email" 
         name="username">
@@ -36,13 +38,14 @@
 
     <div>
       <input class="
-        font-sans text-center text-white 
+        font-sans text-center text-white font-bold
+
         shadow-lg shadow-cyan-500/50 bg-black
         rounded-full border border-cyan-300 
         w-64 p-2 mb-6 placeholder-white
  
         outline-none" 
-        placeholder="Password" 
+        placeholder="PASSWORD" 
         type="password" 
         v-model="user.password"
         name="username">
@@ -53,17 +56,15 @@
       type="button"
       @click="Register"
       class=" 
-        font-sans text-white text-base 
-        shadow-lg shadow-pink-500/50
-        bg-dark-200 w-64 border border-pink-500
-        hover:bg-gray-900 focus:outline-none
-        placeholder-white rounded-full focus:ring-4
-        focus:ring-gray-300 font-medium 
-        rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 
-        dark:hover:bg-gray-700
-        dark:focus:ring-gray-700
+      font-sans text-white text-base font-bold shadow-lg shadow-pink-500/50
+bg-dark-200 w-64 border border-pink-500 hover:bg-gray-900 focus:outline-none
+placeholder-white rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800
+dark:hover:bg-gray-700 dark:focus:ring-gray-700 rounded-full bg-black
+bg-opacity-100 rounded-full border border-pink-500 w-64 p-2 mb-6 text-white
+outline-none
+
         "
-    >Sing up</button><br>
+    >SING UP</button><br>
 
   <br> 
   <div class=" grid grid-cols-3 gap-3 content-evenly ...">
@@ -71,7 +72,7 @@
         <hr class="w-18 h-2 place-content-center">
     </div>
       <div>
-          <small class="text-white">Sign Up Using</small>
+          <small class="text-white font-bold">Sign Up Using</small>
       </div>
     <div>
         <hr class="w-18 place-content-center">
@@ -99,7 +100,7 @@
     <div>
         <small class="text-white">
           Already have account ?
-        <router-link to="/login" class="text-blue-500">Login</router-link>
+        <router-link to="/login" class="text-pink-500">Login</router-link>
         </small>
     </div>
     <br>
@@ -135,10 +136,14 @@ export default {
         .createUserWithEmailAndPassword(this.user.email, this.user.password)
         .then(async(response) => { 
           const db = firebase.firestore()
-
           await db.collection('users').doc(response.uid).set({
             name : this.user.name
           })
+
+        //Password reset
+        //Show error
+        //Email verification
+
         
         /*
         db.collection('users').get().then(r => { r.docs.map(doc => {
@@ -153,7 +158,7 @@ export default {
           })
         */
               response.user.sendEmailVerification().then(() => {
-              this.$router.push('home') 
+                    this.$router.push('home')
               });  
               
              },(err) => {

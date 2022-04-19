@@ -10,6 +10,7 @@ import Play from '../views/Play.vue'
 import Game from '../views/Game.vue'
 import VerifyEmail from '../views/VerifyEmail.vue'
 import RankingView from '../views/Ranking.vue'
+import ForgotPassword from '../views/ForgotPassword.vue'
 
 
 //import RegisterView from '../views/Register.vue'
@@ -44,6 +45,14 @@ const router = new Router ({
     path: '/login',
     name: 'Login',
     component : LoginView,
+     meta: {
+      requiresAuth: false
+    }
+  },
+    {
+    path: '/forgot-password',
+    name: 'forgot-password',
+    component : ForgotPassword,
      meta: {
       requiresAuth: false
     }

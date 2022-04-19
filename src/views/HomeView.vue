@@ -10,76 +10,62 @@
             <img alt="Vue logo" src="../public/assets/img/discord.png">
         </div><br>
 
-        <div class="grid grid-cols-2 flex justify-center">
+<div>
+        <div class="grid grid-cols-2 flex space-x-4  justify-center ">
+          <div>
           <button
               type="button"
               class="
-                font-sans text-white text-base 
-                shadow-lg shadow-pink-500/50 
-                bg-dark-200 border
-                border-pink-500 hover:bg-gray-900 
-                focus:outline-none placeholder-white
-                rounded-full focus:ring-4 
-                focus:ring-gray-300 font-medium 
-                rounded-lg text-sm
-                px-5 py-2.5 mr-2 mb-2 
-                dark:bg-gray-800 dark:hover:bg-gray-700
-                dark:focus:ring-gray-700
-                "
-            >Play</button>
-
+              font-sans text-center font-bold shadow-lg 
+              shadow-cyan-500/50 placeholder-white
+              bg-black bg-opacity-100 rounded-full 
+              border border-cyan-300 p-2 mb-6
+              text-white outline-none
+              "
+            >PLAY</button>
+</div>
+<div>
           <button
             type="button"
             class="
-                font-sans text-white text-base 
-                shadow-lg shadow-pink-500/50 
-                bg-dark-200 border
-                border-pink-500 hover:bg-gray-900 
-                focus:outline-none placeholder-white
-                rounded-full focus:ring-4 
-                focus:ring-gray-300 font-medium 
-                rounded-lg text-sm
-                px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800
-                 dark:hover:bg-gray-700
-                dark:focus:ring-gray-700
+              font-sans text-center font-bold shadow-lg 
+              shadow-pink-500/50 placeholder-white
+              bg-black bg-opacity-100 rounded-full 
+              border border-pink-500 p-2 mb-6
+              text-white outline-none
+
                 "
           >
-          <router-link to="/ranking" class="text-white">Rankings</router-link>
-
+          <router-link to="/ranking" class="text-white">RANKINGS</router-link>
           </button>
-
+</div>
+<div>
           <button
             type="button"
             class="
-                font-sans text-white text-base 
-                shadow-lg shadow-pink-500/50
-                bg-dark-200 border
-                border-pink-500 hover:bg-gray-900 
-                focus:outline-none placeholder-white
-                rounded-full focus:ring-4 
-                focus:ring-gray-300 font-medium 
-                rounded-lg text-sm
-                px-5 py-2.5 mr-2 mb-2 
-                dark:bg-gray-800 dark:hover:bg-gray-700
-                dark:focus:ring-gray-700
-                "
-          >How to play ?</button>
-
+              font-sans text-center font-bold shadow-lg 
+              shadow-pink-500/50 placeholder-white
+              bg-black bg-opacity-100 rounded-full border
+              border-pink-500 p-2 mb-6 text-white
+              outline-none
+              "
+          >HOW TO PLAY</button>
+</div>
+<div>
           <button
             type="button"
             @click="logout"
             class="
-              font-sans text-white text-base shadow-lg 
-              shadow-pink-500/50 bg-dark-200
-              border border-pink-500 hover:bg-gray-900 
-              focus:outline-none placeholder-white
-              rounded-full focus:ring-4 focus:ring-gray-300
-              font-medium rounded-lg text-sm
-              px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 
-              dark:hover:bg-gray-700
-              dark:focus:ring-gray-700
+              font-sans text-center font-bold shadow-lg 
+              shadow-pink-500/50 placeholder-white
+              bg-black bg-opacity-100 rounded-full border 
+              border-pink-500 p-2 mb-6 text-white
+              outline-none
               " 
-          >Exit</button>
+          >EXIT</button>
+          </div>
+          
+        </div>
         </div>
     </div>
   </div>
