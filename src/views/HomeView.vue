@@ -100,7 +100,8 @@ export default {
       firebase.auth().signOut().then(() => {
         this.$router.replace('login')
       })
-    }
+    },
+    
   },
 }
 </script>

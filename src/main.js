@@ -3,10 +3,13 @@ import Vue from 'vue'
 import firebase from 'firebase/compat/app'; 
 import 'firebase/compat/auth';
 
+import 'firebase/compat/firestore'
+
 import App from './App.vue';
 import router from './router';
 import './index.css'
 
+//import { getFirestore } from "firebase/firestore";
 
 
 Vue.config.productionTip = false;
@@ -23,12 +26,23 @@ firebase.initializeApp({
   measurementId: "G-ZT1RS3N639"
 });
 
+export const db = firebase.firestore();
+
+//console.log(db);
+db.collection('users').get().then(r => {
+  r.docs.map(doc => {
+    console.log(doc.data());
+  })
+})
+
 firebase.auth().onAuthStateChanged(() => {
   if(!app) {
     app = new Vue({
     router,
+    db,
     render: h => h(App)
   }).$mount('#app')
   }
 });
+
 

@@ -13,12 +13,11 @@
         border border-cyan-300
         w-64 p-2 mb-6 placeholder-white
 
-
         outline-none"
-      placeholder="Name" 
-      v-model="name"
-      type="name" 
-      name="name">
+        placeholder="Name" 
+        v-model="user.name"
+        type="name" 
+        name="name">
     </div>
 
     <div>
@@ -30,7 +29,7 @@
 
         outline-none"
         placeholder="Email" 
-        v-model="email"
+        v-model="user.email"
         type="email" 
         name="username">
     </div>
@@ -43,10 +42,10 @@
         w-64 p-2 mb-6 placeholder-white
  
         outline-none" 
-      placeholder="Password" 
-      type="password" 
-      v-model="password"
-      name="username">
+        placeholder="Password" 
+        type="password" 
+        v-model="user.password"
+        name="username">
     </div>
     </div>
 
@@ -111,26 +110,52 @@
 <script>
 import firebase from 'firebase/compat/app'; 
 import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+
+//import { collection, getDocs } from "firebase/firestore";
+//import { getAuth, updateProfile } from "firebase/auth";
 
 
 export default {
   name: "RegisterView",
   data() {
     return {
+      user: {
         name : '', 
         email : '',
         password : ''
-    }
+      }
+    };
   },
   methods: {
       Register : function() {
         firebase
         .auth()
-        .createUserWithEmailAndPassword(this.email, this.password)
-        .then((firebaseUser) => { 
-            firebaseUser.user.sendEmailVerification().then(() => {
-             this.$router.push('home') 
-            });
+        .createUserWithEmailAndPassword(this.user.email, this.user.password)
+        .then(async(response) => { 
+          const db = firebase.firestore()
+
+          await db.collection('users').doc(response.uid).set({
+            name : this.user.name
+          })
+        
+        /*
+        db.collection('users').get().then(r => { r.docs.map(doc => {
+        console.log(doc.data()); }) })
+
+        */
+        /*  const auth = getAuth();
+          updateProfile(auth.currentUser, {
+            displayName: response.user.name
+          }). then(() => {
+            console.log("profile registered !")
+          })
+        */
+              response.user.sendEmailVerification().then(() => {
+              this.$router.push('home') 
+              });  
+              
              },(err) => {
                 alert('Oops. ' + err.message) 
           });
@@ -159,7 +184,6 @@ export default {
              alert('Oops. ' + err.message)
         }) 
         },
-
       }
     }
 </script>
