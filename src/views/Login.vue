@@ -62,7 +62,7 @@
 "
     >LOGIN</button><br>
 
-    <br><br>
+    <br>
     <div class=" grid grid-cols-3 gap-3 content-evenly ...">
         <div>
             <hr class="w-18 h-2 place-content-center">

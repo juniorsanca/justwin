@@ -1,18 +1,17 @@
 <template>
   <div class="home">
     
-    <div>
+    <div class="w-full h-screen bg-no-repeat bg-cover">
+
         <div class="px-1 py-2.5 text-center mr-0 mb-2">
         <div>
             <img alt="Vue logo" src="../public/assets/img/justwin.gif">
         </div>
         <div>
-            <img alt="Vue logo" src="../public/assets/img/discord.png">
+            <img alt="Vue logo" src="../public/assets/img/tv-nft.gif">
         </div><br>
 
-<div>
         <div class="grid grid-cols-2 flex space-x-4  justify-center ">
-          <div>
           <button
               type="button"
               class="
@@ -23,8 +22,6 @@
               text-white outline-none
               "
             >PLAY</button>
-</div>
-<div>
           <button
             type="button"
             class="
@@ -33,25 +30,21 @@
               bg-black bg-opacity-100 rounded-full 
               border border-pink-500 p-2 mb-6
               text-white outline-none
-
                 "
           >
           <router-link to="/ranking" class="text-white">RANKINGS</router-link>
           </button>
-</div>
-<div>
+
           <button
             type="button"
-            class="
-              font-sans text-center font-bold shadow-lg 
-              shadow-pink-500/50 placeholder-white
-              bg-black bg-opacity-100 rounded-full border
-              border-pink-500 p-2 mb-6 text-white
-              outline-none
-              "
+            class="font-sans text-center font-bold shadow-lg 
+                    shadow-pink-500/50 placeholder-white
+                    bg-black bg-opacity-100 rounded-full border 
+                    border-pink-500 p-2 mb-6 text-white
+                    outline-none
+                    "
           >HOW TO PLAY</button>
-</div>
-<div>
+
           <button
             type="button"
             @click="logout"
@@ -62,11 +55,9 @@
               border-pink-500 p-2 mb-6 text-white
               outline-none
               " 
-          >EXIT</button>
-          </div>
-          
-        </div>
-        </div>
+          >EXIT</button>          
+
+        </div> 
     </div>
   </div>
   </div>
