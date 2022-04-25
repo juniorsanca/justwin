@@ -65,7 +65,10 @@ const router = new Router ({
     {
     path: '/play',
     name: 'Play',
-    component : Play
+    component : Play,
+       meta: {
+        requiresAuth: true
+      }
   },
     {
     path: '/game',

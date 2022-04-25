@@ -1,6 +1,18 @@
 <template>
 <div>
-<img alt="Vue logo" src="../public/assets/img/justwin.gif"> 
+
+<div>
+<br>
+<div>
+    <router-link to="/" class="text-white">
+        <img alt="go-back" style="width: 15px ; margin-left:10px " src="../public/assets/img/w-back.jpeg">
+    </router-link>
+</div>
+        
+    <div>
+        <img alt="Vue logo" src="../public/assets/img/justwin.gif"> 
+    </div>
+</div>
 
     <div class="relative z-0 mb-6 w-full group">
         <input  type="text" 
